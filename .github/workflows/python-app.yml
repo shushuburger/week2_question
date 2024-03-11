@@ -34,11 +34,11 @@ jobs:
     - name: Install dependencies
       run: |
         python3 -m pip install --upgrade pip3
-        pip3 install pylint pytest
+        pip install pylint pytest
         if [ -f requirements.txt ]; then pip3 install -r requirements.txt; fi
     - name: Lint with pylint
       run: |
         pylint*.py
     - name: Test with pytest
       run: |
-        pytest
+        pytest*.py
